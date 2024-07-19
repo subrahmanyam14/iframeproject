@@ -1,0 +1,30 @@
+.slider{
+    margin-top: 3%;
+}
+.slider-container {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure images don't overflow */
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the div */
+  }
+
+  @media screen and (max-width: 960px)  {
+    .slider-image {
+      width: 100%;
+      height: 70%;
+      object-fit: cover; /* This ensures the image covers the div */
+    }
+  }
+  

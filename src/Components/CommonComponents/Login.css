@@ -1,0 +1,121 @@
+/* Common styles */
+.form-main {
+    background: url(https://cdn.dribbble.com/users/1107512/screenshots/3997677/_g.gif) left top no-repeat, url(https://cdn.dribbble.com/users/720472/screenshots/2055709/send-email.gif) right no-repeat;
+    min-height: 100vh;
+    background-size: contain;
+    overflow: hidden;
+    background-repeat: no-repeat;
+
+  }
+  
+  .form-main-container {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-row {
+    justify-content: center;
+  }
+  
+  .form-card {
+    background: #F9F9F9;
+    margin-top: 150px;
+    box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
+    border-radius: 10px;
+  }
+  
+  .form-card-body {
+    padding: 20px;
+  }
+  
+  .form-text-center h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #1869b0;
+  }
+  
+  .form-btn {
+    background: #1869b0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin: 10px auto;
+    padding: 10px 20px;
+  }
+  
+  .form-btn:hover {
+    background: #0675d6;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #333;
+    padding: 2px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: #1869b0;
+    border-width: 2px;
+    border-style: solid;
+    outline: none;
+  }
+  
+  .form-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form-link {
+    color: #1869b0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .form-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+
+    .form-main {
+      background: url(https://cdn.dribbble.com/users/1107512/screenshots/3997677/_g.gif) no-repeat
+    }
+    .form-card {
+      
+      width: 75%;
+      margin-top: 40%;
+      margin-left: 12.5%;
+    }
+  
+    .form-card-body {
+      padding: 15px;
+    }
+  
+    .form-text-center h1 {
+      font-size: 24px;
+    }
+  
+    .form-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

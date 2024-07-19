@@ -1,0 +1,26 @@
+.full-page-title{
+    background-color: pink;
+    padding: 10px;
+    width: 100vw;
+}
+
+.full-page-ctn-main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-page-iframe iframe {
+    width: 700px; /* Default width for desktop */
+    height: 1000px; /* Set your desired height here */
+    border: 0;
+    margin: 0;
+}
+
+/* Media query for screens with a maximum width of 767px (mobile) */
+@media (max-width: 767px) {
+    iframe {
+        width: 370px; /* Width for mobile screens */
+    }
+}

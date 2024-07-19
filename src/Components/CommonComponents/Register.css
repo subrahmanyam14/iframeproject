@@ -1,0 +1,108 @@
+.registration-form-main {
+  background: url(https://cdn.dribbble.com/users/1107512/screenshots/3997677/_g.gif) left top no-repeat, url(https://cdn.dribbble.com/users/720472/screenshots/2055709/send-email.gif) right no-repeat;
+  min-height: 100vh;
+  background-size: contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-main-container {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+}
+
+.registration-row {
+  justify-content: center;
+}
+
+.registration-card {
+  background: #F9F9F9;
+  margin-top: 20px;
+  box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
+  border-radius: 10px;
+}
+
+.registration-card-body {
+  padding: 20px;
+}
+
+.registration-text-center h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #1869b0;
+}
+
+.registration-btn-submit, .registration-btn-back {
+  background: #1869b0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.registration-btn-submit:hover, .registration-btn-back:hover {
+  background: #0675d6;
+}
+
+.registration-form-group label {
+  display: block;
+  color: #333;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.registration-form-control {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.registration-form-control:focus {
+  border-color: #1869b0;
+  border-width: 2px;
+  border-style: solid;
+  outline: none;
+}
+
+.registration-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.registration-link {
+  color: #1869b0;
+  text-decoration: none;
+}
+
+.registration-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .registration-form-main {
+      background-size: cover;
+      padding: 20px;
+  }
+
+  .registration-card {
+      margin-top: 7%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+}
