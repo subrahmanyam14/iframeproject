@@ -40,12 +40,12 @@ export default function Footer() {
                             <a href="#">FQAs</a>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6">
+                    <div className="col-lg-2 col-md-6">
                         <div className="footer-newsletter">
                             <h2>Newsletter</h2>
                             <form name='NewsLetter'>
-                                <input name='subscribe' className="form-control" placeholder="Email goes here" autoComplete='email' required/>
-                                <button className="btn btn-custom">Submit</button>
+                                <input name='subscribe' className="form-control" placeholder="Email goes here" autoComplete='email' required style={{backgroundColor:"white"}}/>
+                                <input type='submit' value="Submit" style={{backgroundColor:"white"}}/>
                                 <h6>Don't worry, we don't spam!</h6>
                             </form>
                         </div>

@@ -56,13 +56,13 @@
 }
 .filter-container input{
   border-radius: 10px;
-  border: none;
-  
+  border: 2px black solid;
   box-shadow: 0 0 20px 0 rgba(110, 142, 230, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
   background-color: aliceblue;
   /* height: 20%; */
  
 }
+
 
 .filter-input
 {
@@ -78,6 +78,21 @@
     color: #FDBE33 ;
 }
 
+.admin-card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.admin-card-footer button{
+    border-radius: 100px;
+    background-color: #FDBE33;
+    border: none;
+}
+.admin-card-footer button:hover{
+    cursor: pointer;
+}
 @media screen and (max-width: 600px) {
     .allcards-container {
         grid-template-columns: 1fr;

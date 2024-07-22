@@ -98,10 +98,11 @@
   
   .footer .footer-newsletter input {
     margin-bottom: 15px;
-    height: 50px;
+    /* height: 50px; */
     border: 2px solid #FDBE33;
     border-radius: 12px;
     font-size: 18px;
+    background-color: #ffffff;
   }
   
   .footer .footer-newsletter h6 {

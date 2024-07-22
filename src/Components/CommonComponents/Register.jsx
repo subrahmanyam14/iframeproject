@@ -17,23 +17,23 @@ const Register = () => {
 
   const handleRegister = async () => {
     if (password !== confirmPassword) {
-      toast.error('Passwords do not match');
+      toast.error('Passwords do not match', {position: "top-center"});
       return;
     }
 
     try {
       if (!name || !email || !password || !phoneNo) {
-        toast.error('Please provide all fields...');
+        toast.error('Please provide all fields...', {position: "top-center"});
       }
       else {
         await axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`, { name, email, password, phoneNo });
-        toast.success('Registration successful!');
+        toast.success('Registration successful!', {position: "top-center"});
         setTimeout(() => {
           navigate("/login");
         }, 2000);
       }
     } catch (error) {
-      toast.error('Failed to register');
+      toast.error('Failed to register', {position: "top-center"});
     }
   };
 
@@ -71,7 +71,7 @@ const Register = () => {
               <div className="registration-form-group">
                 <label htmlFor="phoneNo">Phone Number:</label>
                 <input
-                  type="text"
+                  type="number"
                   id="phoneNo"
                   className="registration-form-control"
                   value={phoneNo}

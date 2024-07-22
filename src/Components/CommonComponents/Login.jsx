@@ -1,32 +1,30 @@
 import axios from 'axios';
-import {  useState } from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Login.css';  // You can rename it to Login.css if you separate styles
+import './Login.css'; // Ensure this file exists and contains necessary styles
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+
   const handleLogin = async () => {
     try {
-      console.log(`${import.meta.env.VITE_BACKEND_URL}`);
-      let res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, { email: email, password: password });
-      setToken(res.data.token);
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("name", res.data.name);
-      if(res.data.isAdmin)
-      {
-        localStorage.setItem("isAdmin", res.data.isAdmin);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, { email, password });
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('name', res.data.name);
+      if (res.data.isAdmin) {
+        localStorage.setItem('isAdmin', res.data.isAdmin);
       }
-      toast.success('Login successful!'); // Redirect to the dashboard or home page after successful login
+      toast.success('Login successful!', {position: "top-center"});
       setTimeout(() => {
-            navigate("/");
+        navigate('/');
       }, 2000);
     } catch (error) {
-      toast.error('Failed to login');
+      const errorMessage = error.response?.data?.message || 'Failed to login';
+      toast.error(errorMessage, {position: "top-center"});
     }
   };
 

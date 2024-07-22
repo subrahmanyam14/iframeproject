@@ -1,0 +1,107 @@
+/* Container for the main form */
+.add-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+  }
+  
+  /* Container for the form content */
+  .add-main-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
+  }
+  
+  /* General styling for form rows */
+  .add-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Card styling */
+  .add-card {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Card body styling */
+  .add-card-body {
+    padding: 20px;
+  }
+  
+  /* Centered text */
+  .add-text-center {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #052c65;
+  }
+  
+  /* Form group styling */
+  .add-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Label styling */
+  .add-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #052c65;
+    font-weight: bold;
+  }
+  
+  /* Input field styling */
+  .add-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Button styling */
+  .add-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #052c65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-btn:disabled {
+    background-color: #ccc;
+  }
+  
+  .add-btn:hover:not(:disabled) {
+    background-color: #1869b0;
+  }
+  
+  /* Styling for additional links */
+  .add-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .add-links a {
+    color: #052c65;
+    text-decoration: none;
+  }
+  
+  .add-links a:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .add-group {
+      flex-direction: column;
+    }
+  }
+  

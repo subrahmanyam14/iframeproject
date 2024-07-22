@@ -53,7 +53,7 @@ const AllCards = () => {
     return (
         <div className='allcards'>
             <div className='filter-container'> 
-                <h4 >Search: </h4>
+                <h1 >Search: </h1>
                 <input
                     type="text"
                     placeholder="search..."

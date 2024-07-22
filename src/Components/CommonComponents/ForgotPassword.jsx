@@ -31,9 +31,9 @@ const ForgetPassword = () => {
       setOriginalOtp(res.data.savedOtp.otp.toString());
       console.log('Original OTP from server:', res);
       setIsEmailSubmitted(true);
-      toast.success('OTP sent to your email!');
+      toast.success('OTP sent to your email!', {position: "top-center"});
     } catch (error) {
-      toast.error('User not found. Failed to send OTP');
+      toast.error('User not found. Failed to send OTP', {position: "top-center"});
     }
   };
 
@@ -42,20 +42,20 @@ const ForgetPassword = () => {
     console.log('Original OTP:', originalOtp);
     if (otp.trim() === originalOtp.trim()) {
       setIsOtpVerified(true);
-      toast.success('OTP verified successfully!');
+      toast.success('OTP verified successfully!', {position: "top-center"});
     } else {
-      toast.error('Invalid OTP');
+      toast.error('Invalid OTP', {position: "top-center"});
     }
   };
 
   const handleChangePassword = async () => {
     if (password !== confirmPassword) {
-      toast.error('Passwords do not match');
+      toast.error('Passwords do not match', {position: "top-center"});
       return;
     }
     try {
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/verify-otp`, { email, otp, password });
-      toast.success('Password changed successfully!');
+      toast.success('Password changed successfully!', {position: "top-center"});
       setTimeout(() => {
         navigate("/login");
       }, 5000);
@@ -64,13 +64,13 @@ const ForgetPassword = () => {
     }
   };
 
-  const handleBackClick = () => {
-    navigate(-1);
-  };
+  // const handleBackClick = () => {
+  //   navigate(-1);
+  // };
 
   return (
     <div className="forgotPasswordmain">
-      <button onClick={handleBackClick} style={{ backgroundColor: "blue", marginTop: "3%", marginLeft: "5%" , borderRadius:"30%"}}>Back</button>
+      
       <div className="forget-password-main-container1">
         <ToastContainer />
         <div className="forget-password-row justify-content-center">

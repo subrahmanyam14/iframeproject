@@ -14,7 +14,8 @@ import AddCard from './Components/Admin/AddCard';
 import UpdateCard from './Components/Admin/UpdateCard';
 import NavBar from './Components/NavComponent/NavBar';
 import AllCards from './Components/CardComponents/AllCards';
-import Footer from './Components/FooterComponent/Footer' 
+import Footer from './Components/FooterComponent/Footer';
+import AdminDashBoard from './Components/Admin/AdminDashBoard'; 
 
 
 export const  Store = createContext();
@@ -43,7 +44,7 @@ function App() {
         <Route path='/image-slider' element={<ImageSlider/>}/>
         <Route path='/fullpage' element={<ExtandPage/>} />
 
-        
+        <Route path='/admin-dashboard' element={<AdminDashBoard/>}/>
 
 
         {/* <Route path='/user-dashboard' element={<UserDashBoard/>} /> */}

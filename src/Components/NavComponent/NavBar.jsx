@@ -18,7 +18,7 @@ function NavBar() {
             <span>Vjaya Rahasyam</span>
             {/* <i className="fas fa-code"></i> */}
             <span className="icon">
-              <CodeIcon />
+              {/* <CodeIcon /> */}
             </span>
           </NavLink>
 

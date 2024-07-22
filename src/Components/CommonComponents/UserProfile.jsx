@@ -44,7 +44,7 @@ const UserProfile = () => {
       setData({...data, ...extract});
       
     } catch (error) {
-      toast.error('Failed to fetch profile...!');
+      toast.error('Failed to fetch profile...!', {position: "top-center"});
     }
   };
 
