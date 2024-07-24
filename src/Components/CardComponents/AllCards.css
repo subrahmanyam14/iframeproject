@@ -36,6 +36,8 @@
 
 .allcard-body {
     padding: 15px;
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
 }
 
 .allcard-body p {
@@ -93,6 +95,15 @@
 .admin-card-footer button:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+    .allcards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
 @media screen and (max-width: 600px) {
     .allcards-container {
         grid-template-columns: 1fr;

@@ -26,6 +26,7 @@
   color: white;
   padding: 15px;
   text-align: center;
+  
 }
 
 .all-card-header h3, .all-card-header h6 {
@@ -35,6 +36,8 @@
 
 .all-card-body {
   padding: 15px;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
 }
 
 .all-card-body p {

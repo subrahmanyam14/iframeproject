@@ -70,9 +70,9 @@ const AllCards = () => {
                 ) : (
                     displayedData.map((card, index) => (
                         <div key={index} className="allcard" onClick={() => handleOnClick(card)}>
-                            <div className="allcard-header">
+                            <div className="all-card-header">
                                 <h3>{card.title}</h3>
-                                <h6>{card.date}</h6>
+                                <h6>{formatDate(card.date)}</h6>
                             </div>
                             <div className="allcard-body">
                                 <p>Description: {card.description}</p>
@@ -85,5 +85,15 @@ const AllCards = () => {
         </div>
     );
 }
+
+function formatDate(timestamp) {
+    const date = new Date(timestamp);
+  
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const year = date.getFullYear();
+  
+    return `${day}-${month}-${year}`;
+  }
 
 export default AllCards;

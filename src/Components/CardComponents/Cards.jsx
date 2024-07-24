@@ -20,7 +20,7 @@ const Cards = () => {
       const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/all-cards`);
       if (res.data.allCards) {
         console.log("Fetched Data: ", res.data.allCards); // Debugging log
-        setData(res.data.allCards);
+        //setData(res.data.allCards);
         handleSortData(res.data.allCards);
         setIsLoading(false);
       }
@@ -31,9 +31,10 @@ const Cards = () => {
   };
 
   const handleSortData = (cards) => {
-    const sortedData = [...cards].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const sortedData = [...cards].sort((a, b) => new Date(b.date) - new Date(a.date));
     setData(sortedData);
   };
+  
 
   const handleOnClick = (card) => {
     if (token) {
@@ -51,7 +52,7 @@ const Cards = () => {
   };
 
   return (
-    <div className='card'>
+    <div className='cards'>
       <h3>Recently updated cards....</h3>
       <div className="all-cards-container">
         {isLoading ? (
@@ -63,7 +64,7 @@ const Cards = () => {
             <div key={index} className="all-card" onClick={() => handleOnClick(card)}>
               <div className="all-card-header">
                 <h3>{card.title}</h3>
-                <h6>{card.date}</h6>
+                <h6>{formatDate(card.date)}</h6>
               </div>
               <div className="all-card-body">
                 <p>Description: {card.description}</p>
@@ -76,5 +77,15 @@ const Cards = () => {
     </div>
   );
 };
+
+function formatDate(timestamp) {
+  const date = new Date(timestamp);
+
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  const year = date.getFullYear();
+
+  return `${day}-${month}-${year}`;
+}
 
 export default Cards;
