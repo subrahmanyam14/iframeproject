@@ -46,7 +46,7 @@ const AllCards = () => {
                 }
             });
         } else {
-            toast.error('Please login...!');
+            toast.error('Please login...!', { position: "top-center" });
         }
     };
 
